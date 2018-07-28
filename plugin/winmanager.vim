@@ -15,7 +15,7 @@
 
 "set auto open Winmanager
 if g:AutoOpenWinManager
-	autocmd VimEnter * nested call s:StartWindowsManager()|1wincmd w 
+	autocmd VimEnter * nested call s:TogglewindowsManager()|1wincmd w 
 end
 
 " quit if the user doesnt want us or if we are already loaded.
@@ -1068,9 +1068,8 @@ function! <SID>ToggleWindowsManager()
 	if IsWinManagerVisible()
 		call s:CloseWindowsManager()
 	else
-		call StopAutoClose()
 		call s:StartWindowsManager()
-		exe '1wincmd w' 
+		exec 'q'
 	end
 endfunction
 
