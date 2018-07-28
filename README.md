@@ -1,0 +1,2 @@
+# winmanager
+vim
