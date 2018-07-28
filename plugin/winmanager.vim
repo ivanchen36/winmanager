@@ -1059,6 +1059,10 @@ function! <SID>IsExplorerBuffer(num)
 	return 0
 endfunction
 
+function! StopAutoClose()
+    silent! autocmd! Exit_onlywindow
+endfunction
+
 " toggle showing the explorer plugins.
 function! <SID>ToggleWindowsManager()
 	if IsWinManagerVisible()
