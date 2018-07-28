@@ -274,9 +274,7 @@ function! <SID>StartWindowsManager()
 			let currentWindowNumber = currentWindowNumber + 1
 		end
 		let cen = 1
-		" for now assume that the explorer windows always stay on the left.
-		" TODO: make this optional later
-		wincmd L
+		wincmd H
 		" set up the correct width
 		exe g:winManagerWidth.'wincmd |'
 	end
